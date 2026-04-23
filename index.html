@@ -3,52 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHY Events - Trang 1</title>
+    <title>SHY Events - iOS 26 Style</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(to bottom, #94b9c5 0%, #2e5a71 50%, #d4f1e8 100%);
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(circle at top right, #e0f2fe, #f8fafc);
             min-height: 100vh;
+            color: #1d1d1f;
         }
-        .serif-font { font-family: 'Playfair Display', serif; }
-        .custom-card {
-            background: white;
-            border-radius: 10px 80px 10px 10px;
-            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
+        .ios-blur {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .btn-go {
-            background: linear-gradient(to right, #c7d2fe, #86efac);
+        .ios-card {
+            border-radius: 35px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .bg-event-1 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
-        .bg-event-2 { background: #1a0b08; }
-        .bg-event-3 { background: #1e3a5f; }
-        .bg-event-4 { background: #6b0f1a; }
-        .bg-event-5 { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
+        .ios-card:active {
+            transform: scale(0.95);
+        }
+        .btn-next {
+            background: #007aff;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);
+        }
     </style>
 </head>
-<body class="p-8">
-    <div class="max-w-7xl mx-auto flex justify-end mb-4">
-        <a href="index2.html" class="bg-white/20 hover:bg-white/40 text-white px-6 py-2 rounded-full border border-white/50 backdrop-blur-sm transition-all font-semibold">
-            Xem trang tiếp theo →
+<body class="p-6 md:p-12">
+
+    <nav class="max-w-6xl mx-auto flex justify-between items-center mb-16">
+        <div class="text-2xl font-bold tracking-tight">Events</div>
+        <a href="index2.html" class="btn-next px-6 py-2.5 rounded-full font-medium transition-all hover:opacity-90">
+            Trang tiếp theo →
         </a>
-    </div>
+    </nav>
 
-    <div class="text-center mb-16 pt-6">
-        <h1 class="serif-font text-4xl md:text-5xl tracking-widest text-slate-800 uppercase flex justify-center items-center gap-4">
-            Các sự kiện của <span class="italic normal-case text-5xl relative">Shy</span>
-        </h1>
-    </div>
+    <main class="max-w-6xl mx-auto">
+        <header class="mb-12">
+            <h1 class="text-5xl font-semibold mb-2">Xin chào,</h1>
+            <p class="text-xl text-gray-500">Đây là các sự kiện nổi bật của SHY.</p>
+        </header>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 px-4">
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-1 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <span class="text-white font-bold text-2xl">SHY</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="ios-card ios-blur p-8 shadow-sm">
+                <div class="w-16 h-16 bg-blue-100 rounded-2xl mb-6 flex items-center justify-center">
+                    <span class="text-2xl text-blue-600">✦</span>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">Ra mắt SHY</h3>
+                <p class="text-gray-500 mb-6">Tổ chức chính thức vào tháng 2.</p>
+                <button class="w-full py-3 bg-gray-100 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">Khám phá</button>
             </div>
-            <h3 class="font-bold text-xs uppercase text-center flex-grow">Ra mắt SHY + Tổ chức chính thức</h3>
-            <a href="#" class="mt-4 btn-go w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
+
+            <div class="ios-card ios-blur p-8 shadow-sm">
+                <div class="w-16 h-16 bg-purple-100 rounded-2xl mb-6 flex items-center justify-center">
+                    <span class="text-2xl text-purple-600">☀</span>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">Mid-Autumn</h3>
+                <p class="text-gray-500 mb-6">Lễ hội trung thu đặc sắc.</p>
+                <button class="w-full py-3 bg-gray-100 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">Xem chi tiết</button>
+            </div>
         </div>
+
+        <div class="mt-20 text-center">
+            <a href="index2.html" class="text-blue-600 font-semibold text-lg hover:underline">Xem thêm sự kiện ở trang sau →</a>
         </div>
+    </main>
+
 </body>
 </html>
