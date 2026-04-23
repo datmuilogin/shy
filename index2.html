@@ -3,83 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHY Events - Trang 2</title>
+    <title>SHY Events - Page 2 (iOS 26)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            /* Tông màu ấm khác với trang 1 */
-            background: linear-gradient(to bottom, #e2d1c3 0%, #f5f5f5 100%);
+            font-family: 'SF Pro Display', sans-serif;
+            background: radial-gradient(circle at top left, #fff7ed, #ffffff);
             min-height: 100vh;
+            color: #1d1d1f;
         }
-        .serif-font { font-family: 'Playfair Display', serif; }
-        
-        .custom-card {
-            background: white;
-            border-radius: 10px 80px 10px 10px;
-            /* Đổ bóng màu ấm hơn */
-            box-shadow: 15px 15px 0px rgba(139, 92, 71, 0.2);
-            transition: transform 0.3s ease;
+        .ios-blur {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(212, 163, 115, 0.2);
         }
-        .custom-card:hover { transform: translateY(-5px); }
-
-        /* Màu sắc card mới cho trang 2 */
-        .bg-alt-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
-        .bg-alt-2 { background: #434343; }
-        .bg-alt-3 { background: #2c3e50; }
-        .bg-alt-4 { background: #d35400; }
-        .bg-alt-5 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
-
+        .ios-card {
+            border-radius: 40px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .ios-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
         .btn-back {
-            background: #8b5c47;
-            color: white;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body class="p-8">
+<body class="p-6 md:p-12">
 
-    <div class="max-w-7xl mx-auto flex justify-start mb-4">
-        <a href="index.html" class="bg-stone-800 text-white px-6 py-2 rounded-full shadow-lg hover:bg-stone-700 transition-all font-semibold flex items-center gap-2">
-            ← Quay lại trang chủ
+    <nav class="max-w-6xl mx-auto flex justify-start items-center mb-16">
+        <a href="index.html" class="btn-back px-6 py-2.5 rounded-full font-medium transition-all hover:bg-black/10 flex items-center gap-2">
+            ← Quay lại
         </a>
-    </div>
+    </nav>
 
-    <div class="text-center mb-16 pt-6">
-        <h1 class="serif-font text-4xl md:text-5xl tracking-widest text-stone-800 uppercase flex justify-center items-center gap-4">
-            Bộ sưu tập <span class="italic normal-case text-5xl relative text-orange-800">Mới</span>
-        </h1>
-    </div>
+    <main class="max-w-6xl mx-auto">
+        <header class="mb-12 text-center md:text-left">
+            <h1 class="text-6xl font-bold tracking-tighter mb-4 text-orange-900/80">Workshop 2026</h1>
+            <p class="text-xl text-stone-500">Không gian sáng tạo của riêng bạn.</p>
+        </header>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 px-4">
-        
-        <div class="custom-card p-4 flex flex-col items-center border border-orange-100">
-            <div class="w-full aspect-square bg-alt-1 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <span class="text-white font-bold text-2xl">NEW</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="ios-card ios-blur p-10 overflow-hidden relative group">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-orange-200/30 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+                <h3 class="text-3xl font-semibold mb-4">Sáng tạo nội dung</h3>
+                <p class="text-stone-600 text-lg mb-8 italic">"Nơi những ý tưởng bắt đầu thành hình."</p>
+                <div class="flex gap-4">
+                    <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border border-orange-100 uppercase">Mới</span>
+                    <span class="px-4 py-1 bg-white rounded-full text-xs font-bold border border-orange-100 uppercase">iOS 26</span>
+                </div>
             </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-xs uppercase mb-1">Sự kiện mùa hè 2024</h3>
-                <p class="text-[10px] text-gray-500 italic">Sắp diễn ra</p>
+
+            <div class="ios-card bg-stone-900 p-10 text-white">
+                <h3 class="text-3xl font-semibold mb-4">Phiên bản giới hạn</h3>
+                <p class="text-stone-400 text-lg mb-8">Dành cho các thành viên VIP của SHY.</p>
+                <button class="px-8 py-3 bg-white text-black rounded-full font-bold">Đăng ký ngay</button>
             </div>
-            <a href="#" class="mt-4 btn-back w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
         </div>
-
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-alt-2 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4 text-white">
-                Black Edition
-            </div>
-            <h3 class="font-bold text-xs uppercase text-center flex-grow">Workshop Sáng Tạo</h3>
-            <a href="#" class="mt-4 btn-back w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
-        </div>
-
-        </div>
-
-    <div class="mt-32 max-w-2xl mx-auto bg-stone-100 p-8 shadow-xl border-l-8 border-orange-800 flex items-center gap-8">
-        <div class="flex-1">
-            <h2 class="serif-font text-3xl italic mb-2 text-stone-800">Thông tin thêm</h2>
-            <p class="text-sm text-stone-600">Đây là các hoạt động mở rộng trong năm 2024 của đội ngũ SHY.</p>
-        </div>
-    </div>
+    </main>
 
 </body>
 </html>
