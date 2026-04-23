@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHY Events Dashboard</title>
+    <title>SHY Events - Trang 1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,112 +13,42 @@
             min-height: 100vh;
         }
         .serif-font { font-family: 'Playfair Display', serif; }
-
-        
-        /* Hiệu ứng bo góc đặc trưng của card */
         .custom-card {
             background: white;
             border-radius: 10px 80px 10px 10px;
             box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
-        .custom-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Nút bấm Gradient */
         .btn-go {
             background: linear-gradient(to right, #c7d2fe, #86efac);
-            transition: opacity 0.3s;
         }
-        .btn-go:hover { opacity: 0.8; }
-
-        /* Màu sắc riêng cho từng card */
         .bg-event-1 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
-        .bg-event-2 { background: #1a0b08; } /* Dark reddish black */
-        .bg-event-3 { background: #1e3a5f; } /* Navy */
-        .bg-event-4 { background: #6b0f1a; } /* Burgundy */
+        .bg-event-2 { background: #1a0b08; }
+        .bg-event-3 { background: #1e3a5f; }
+        .bg-event-4 { background: #6b0f1a; }
         .bg-event-5 { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
     </style>
 </head>
 <body class="p-8">
+    <div class="max-w-7xl mx-auto flex justify-end mb-4">
+        <a href="index2.html" class="bg-white/20 hover:bg-white/40 text-white px-6 py-2 rounded-full border border-white/50 backdrop-blur-sm transition-all font-semibold">
+            Xem trang tiếp theo →
+        </a>
+    </div>
 
-    <div class="text-center mb-16 pt-10">
+    <div class="text-center mb-16 pt-6">
         <h1 class="serif-font text-4xl md:text-5xl tracking-widest text-slate-800 uppercase flex justify-center items-center gap-4">
-            Các sự kiện của 
-            <span class="italic normal-case text-5xl relative">
-                Shy
-                <span class="absolute -bottom-2 left-0 w-full h-px bg-slate-800"></span>
-            </span>
+            Các sự kiện của <span class="italic normal-case text-5xl relative">Shy</span>
         </h1>
     </div>
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 px-4">
-        
         <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-1 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4 overflow-hidden">
-                <img src="https://via.placeholder.com/150/ffffff/000000?text=SHY" alt="logo" class="w-24">
+            <div class="w-full aspect-square bg-event-1 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
+                <span class="text-white font-bold text-2xl">SHY</span>
             </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-xs uppercase mb-1">Ra mắt SHY + Tổ chức chính thức</h3>
-            </div>
+            <h3 class="font-bold text-xs uppercase text-center flex-grow">Ra mắt SHY + Tổ chức chính thức</h3>
             <a href="#" class="mt-4 btn-go w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
         </div>
-
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-2 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <img src="https://via.placeholder.com/150/ffffff/000000?text=SHY" alt="logo" class="w-24 opacity-80">
-            </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-xs uppercase mb-1">Lần thứ 1.5</h3>
-                <p class="text-[10px] text-gray-500 italic">Sự cố khách quan</p>
-            </div>
-            <a href="#" class="mt-4 bg-orange-900 text-white w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
         </div>
-
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-3 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <img src="https://via.placeholder.com/150/ffffff/000000?text=SHY" alt="logo" class="w-24 opacity-80">
-            </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-[10px] uppercase mb-1">Mid-Autumn Festival with SHY</h3>
-                <p class="text-[9px] text-gray-500">Trung thu 2023 & Kết quả GA</p>
-            </div>
-            <a href="#" class="mt-4 bg-slate-800 text-white w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
-        </div>
-
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-4 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <img src="https://via.placeholder.com/150/ffffff/000000?text=SHY" alt="logo" class="w-24 opacity-80">
-            </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-xs uppercase mb-1">WISHYOU</h3>
-                <p class="text-[10px] text-gray-500">Hoạt động tặng quà Giáng sinh</p>
-            </div>
-            <a href="#" class="mt-4 bg-red-950 text-white w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
-        </div>
-
-        <div class="custom-card p-4 flex flex-col items-center">
-            <div class="w-full aspect-square bg-event-5 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-4">
-                <img src="https://via.placeholder.com/150/ffffff/000000?text=SHY" alt="logo" class="w-24 opacity-80">
-            </div>
-            <div class="text-center flex-grow">
-                <h3 class="font-bold text-xs uppercase mb-1">Lần thứ 2</h3>
-                <p class="text-[10px] text-gray-500">SHINE WITH SHY</p>
-            </div>
-            <a href="#" class="mt-4 btn-go w-24 py-1 rounded-full text-center text-sm font-semibold shadow-inner">Go</a>
-        </div>
-
-    </div>
-
-    <div class="mt-32 max-w-2xl mx-auto bg-white p-8 shadow-xl flex items-center gap-8">
-        <div class="flex-1">
-            <h2 class="serif-font text-3xl italic mb-4">What's News?</h2>
-            <p class="text-sm font-semibold uppercase tracking-wider">Xem các thông báo của SHY tại đây</p>
-        </div>
-        <div class="w-32 h-32 bg-cyan-100 rounded-tr-[40px]">
-            </div>
-    </div>
-
 </body>
 </html>
