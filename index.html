@@ -3,75 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHY Events - iOS 26 Style</title>
+    <title>SHY Fashion Hub - iOS 26</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: radial-gradient(circle at top right, #e0f2fe, #f8fafc);
+            font-family: 'SF Pro Display', sans-serif;
+            background: radial-gradient(circle at top right, #e2e8f0, #ffffff, #cbd5e1);
             min-height: 100vh;
             color: #1d1d1f;
         }
         .ios-blur {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
-        .ios-card {
-            border-radius: 35px;
+        .nav-link { transition: all 0.3s; }
+        .nav-link:hover { color: #007aff; transform: translateY(-1px); }
+        .custom-card {
+            border-radius: 20px 80px 20px 20px;
+            box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.05);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .ios-card:active {
-            transform: scale(0.95);
-        }
-        .btn-next {
-            background: #007aff;
-            color: white;
-            box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);
-        }
+        .custom-card:hover { transform: scale(1.02); box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.08); }
+        .serif-font { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="p-6 md:p-12">
-
-    <nav class="max-w-6xl mx-auto flex justify-between items-center mb-16">
-        <div class="text-2xl font-bold tracking-tight">Events</div>
-        <a href="index2.html" class="btn-next px-6 py-2.5 rounded-full font-medium transition-all hover:opacity-90">
-            Trang tiếp theo →
-        </a>
+<body class="pb-20">
+    <nav class="sticky top-0 z-50 ios-blur px-8 py-4 flex justify-between items-center mb-10 shadow-sm">
+        <div class="text-xl font-bold tracking-tighter">SHY <span class="text-blue-600">STUDIO</span></div>
+        <div class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest">
+            <a href="index.html" class="nav-link text-blue-600">Trang chủ</a>
+            <a href="page1.html" class="nav-link">Ra mắt</a>
+            <a href="page2.html" class="nav-link">Lần 1.5</a>
+            <a href="page3.html" class="nav-link">Mid-Autumn</a>
+            <a href="page4.html" class="nav-link">WishYou</a>
+            <a href="page5.html" class="nav-link">Lần 2</a>
+        </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto">
-        <header class="mb-12">
-            <h1 class="text-5xl font-semibold mb-2">Xin chào,</h1>
-            <p class="text-xl text-gray-500">Đây là các sự kiện nổi bật của SHY.</p>
+    <div class="max-w-7xl mx-auto px-6">
+        <header class="text-center mb-20">
+            <h1 class="serif-font text-5xl md:text-6xl tracking-widest text-slate-800 uppercase mb-4">
+                CÁC SỰ KIỆN CỦA <span class="italic normal-case">Shy</span>
+            </h1>
+            <div class="h-1 w-24 bg-slate-800 mx-auto"></div>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="ios-card ios-blur p-8 shadow-sm">
-                <div class="w-16 h-16 bg-blue-100 rounded-2xl mb-6 flex items-center justify-center">
-                    <span class="text-2xl text-blue-600">✦</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-24">
+            <div class="custom-card ios-blur p-5 flex flex-col items-center">
+                <div class="w-full aspect-square bg-gradient-to-br from-purple-200 to-blue-200 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-6">
+                    <span class="text-4xl">✧</span>
                 </div>
-                <h3 class="text-2xl font-semibold mb-2">Ra mắt SHY</h3>
-                <p class="text-gray-500 mb-6">Tổ chức chính thức vào tháng 2.</p>
-                <button class="w-full py-3 bg-gray-100 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">Khám phá</button>
+                <h3 class="font-bold text-[11px] uppercase text-center mb-4 leading-tight h-8">Ra mắt SHY + Tổ chức chính thức</h3>
+                <a href="page1.html" class="w-24 py-2 bg-gradient-to-r from-blue-100 to-green-100 rounded-full text-center text-xs font-bold shadow-inner border border-white/50">Go</a>
             </div>
 
-            <div class="ios-card ios-blur p-8 shadow-sm">
-                <div class="w-16 h-16 bg-purple-100 rounded-2xl mb-6 flex items-center justify-center">
-                    <span class="text-2xl text-purple-600">☀</span>
+            <div class="custom-card ios-blur p-5 flex flex-col items-center">
+                <div class="w-full aspect-square bg-stone-900 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-6">
+                    <span class="text-white text-xs tracking-widest uppercase">Lần thứ 1.5</span>
                 </div>
-                <h3 class="text-2xl font-semibold mb-2">Mid-Autumn</h3>
-                <p class="text-gray-500 mb-6">Lễ hội trung thu đặc sắc.</p>
-                <button class="w-full py-3 bg-gray-100 rounded-2xl font-semibold hover:bg-gray-200 transition-colors">Xem chi tiết</button>
+                <h3 class="font-bold text-[11px] uppercase text-center mb-4 leading-tight h-8">Lần thứ 1.5<br><span class="text-gray-400 italic font-normal">Sự cố khách quan</span></h3>
+                <a href="page2.html" class="w-24 py-2 bg-orange-900 text-white rounded-full text-center text-xs font-bold shadow-inner">Go</a>
+            </div>
+
+            <div class="custom-card ios-blur p-5 flex flex-col items-center">
+                <div class="w-full aspect-square bg-blue-900 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-6">
+                    <span class="text-white text-xs tracking-widest uppercase text-center">Mid-Autumn</span>
+                </div>
+                <h3 class="font-bold text-[11px] uppercase text-center mb-4 leading-tight h-8">Mid-Autumn Festival With SHY</h3>
+                <a href="page3.html" class="w-24 py-2 bg-slate-800 text-white rounded-full text-center text-xs font-bold shadow-inner">Go</a>
+            </div>
+
+            <div class="custom-card ios-blur p-5 flex flex-col items-center">
+                <div class="w-full aspect-square bg-red-900 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-6">
+                    <span class="text-white text-xs tracking-widest">WISHYOU</span>
+                </div>
+                <h3 class="font-bold text-[11px] uppercase text-center mb-4 leading-tight h-8">WISHYOU<br><span class="text-gray-400 italic font-normal">Giáng sinh</span></h3>
+                <a href="page4.html" class="w-24 py-2 bg-red-950 text-white rounded-full text-center text-xs font-bold shadow-inner">Go</a>
+            </div>
+
+            <div class="custom-card ios-blur p-5 flex flex-col items-center">
+                <div class="w-full aspect-square bg-gradient-to-br from-pink-200 to-purple-200 rounded-tr-[60px] rounded-bl-[10px] flex items-center justify-center mb-6">
+                    <span class="text-4xl font-light">SHINE</span>
+                </div>
+                <h3 class="font-bold text-[11px] uppercase text-center mb-4 leading-tight h-8">Lần thứ 2<br><span class="text-gray-400 italic font-normal">Shine with SHY</span></h3>
+                <a href="page5.html" class="w-24 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full text-center text-xs font-bold shadow-inner border border-white/50">Go</a>
             </div>
         </div>
 
-        <div class="mt-20 text-center">
-            <a href="index2.html" class="text-blue-600 font-semibold text-lg hover:underline">Xem thêm sự kiện ở trang sau →</a>
+        <div class="ios-blur p-12 rounded-[50px] shadow-xl flex flex-col md:flex-row items-center gap-12 border border-white">
+            <div class="flex-1">
+                <h2 class="serif-font text-5xl italic mb-6">What's News?</h2>
+                <p class="text-sm font-bold uppercase tracking-[0.3em] mb-4 text-slate-500">Xem các thông báo mới nhất</p>
+                <p class="text-slate-600 leading-relaxed max-w-md">Khám phá những bộ sưu tập thời trang bền vững và các chiến dịch sáng tạo mới nhất của chúng tôi trong mùa này.</p>
+            </div>
+            <div class="w-full md:w-64 h-64 bg-cyan-100 rounded-tr-[100px] overflow-hidden shadow-inner flex items-center justify-center text-cyan-500 font-bold">
+                IMAGE SPACE
+            </div>
         </div>
-    </main>
-
+    </div>
 </body>
 </html>
