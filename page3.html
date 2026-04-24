@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mid-Autumn Festival - Cultural Fusion</title>
+    <meta charset="UTF-8"><title>Heritage - Trung Thu SHY</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'SF Pro Display', sans-serif; background: #fffcf2; color: #252422; }
-        .moon-gradient { background: linear-gradient(to bottom, #252422, #403d39); }
-        .content-card { border-radius: 50px; background: white; box-shadow: 0 40px 100px rgba(0,0,0,0.05); }
+        body { background: #fffcf2; font-family: serif; }
+        .ios-blur { background: rgba(255, 252, 242, 0.8); backdrop-filter: blur(20px); border: 1px solid #ebcf9b; }
+        .heritage-card { border-radius: 60px 10px 60px 60px; background: white; padding: 3rem; border: 1px solid #fcefb4; }
     </style>
 </head>
-<body class="pb-20">
-    <nav class="p-8 flex justify-between items-center">
-        <a href="index.html" class="font-bold text-lg uppercase tracking-[0.3em]">SHY × HERITAGE</a>
+<body class="p-4 md:p-8 text-stone-800">
+    <nav class="sticky top-4 z-50 max-w-6xl mx-auto ios-blur px-8 py-4 flex justify-between items-center rounded-full shadow-lg">
+        <div class="text-xl font-bold tracking-tighter">SHY <span class="text-orange-800 italic">Heritage</span></div>
+        <div class="hidden md:flex gap-6 font-medium text-[11px] uppercase tracking-widest text-stone-400">
+            <a href="index.html">Trang chủ</a><a href="page1.html">Ra mắt</a><a href="page2.html">Noir</a><a href="page3.html" class="text-orange-800 font-bold">Heritage</a><a href="page4.html">WishYou</a><a href="page5.html">Shine</a>
+        </div>
     </nav>
 
-    <div class="max-w-5xl mx-auto px-6">
-        <div class="moon-gradient h-80 rounded-[80px] mb-12 flex flex-col items-center justify-center text-yellow-200">
-            <div class="w-24 h-24 bg-yellow-100 rounded-full blur-lg absolute opacity-30"></div>
-            <h1 class="text-4xl font-light tracking-widest uppercase">Ánh Trăng Hiện Đại</h1>
+    <div class="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row gap-12">
+        <div class="w-full md:w-1/3">
+            <img src="https://picsum.photos/600/900?random=33" class="rounded-[60px] shadow-2xl">
         </div>
-
-        <article class="content-card p-12 md:p-20 border border-yellow-100">
-            <h2 class="text-4xl font-bold mb-10 text-slate-800">Cảm hứng từ chiếc đèn lồng giấy và nghệ thuật xếp vải Origami</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 leading-relaxed text-lg">
-                <div class="space-y-6">
-                    <p>Trung Thu tại SHY Studio không chỉ là bánh nướng và trà xanh. Đó là cuộc đối thoại giữa ký ức tuổi thơ và thẩm mỹ tương lai. Chúng tôi lấy cảm hứng từ cấu trúc xếp nếp của những chiếc đèn lồng giấy thủ công để áp dụng vào kỹ thuật xếp ly trên váy lụa.</p>
-                    <p>Màu sắc chủ đạo là vàng hổ phách, xanh bóng đêm và trắng ngà. Sự phối hợp này tạo nên một diện mạo vừa hoài cổ vừa mang hơi thở của thời đại kỹ thuật số.</p>
-                </div>
-                <div class="space-y-6">
-                    <p>Bộ sưu tập sử dụng chất liệu tơ tằm truyền thống của Việt Nam nhưng được xử lý bề mặt bằng công nghệ nano chống nhăn. Đây là bước tiến của SHY trong việc bảo tồn văn hóa thông qua công nghệ hiện đại.</p>
-                    <p>Chúng tôi tin rằng, trang phục truyền thống không cần phải cứng nhắc. Nó cần phải sống, thở và chuyển động cùng nhịp đập của thành phố hiện đại.</p>
-                </div>
+        <div class="heritage-card flex-1 shadow-xl">
+            <h1 class="text-5xl font-serif mb-8 text-orange-900 italic underline decoration-1 underline-offset-8">Ánh Trăng Heritage</h1>
+            <div class="prose text-lg leading-relaxed text-stone-600">
+                <p>Nội dung trang này là sự giao thoa văn hóa. SHY tái hiện lại những chiếc đèn lồng Hội An thông qua kỹ thuật xếp nếp vải Origami trên những chiếc chân váy dài. Màu sắc chủ đạo là vàng hổ phách và xanh bóng đêm.</p>
+                <p>Chúng tôi cộng tác với các nghệ nhân làng nghề dệt lụa Vạn Phúc để tạo ra những bản in giới hạn lấy cảm hứng từ các họa tiết cổ nhưng được làm mới dưới con mắt hiện đại. Đây là bộ sưu tập tôn vinh giá trị cội nguồn trong một thế giới phẳng.</p>
             </div>
-        </article>
+        </div>
     </div>
 </body>
 </html>
